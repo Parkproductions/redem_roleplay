@@ -20,6 +20,7 @@ AddEventHandler("redemrp:createCharacter", function(firstname, lastname)
 	local _source = source
 	TriggerEvent("redem:getPlayerFromId", _source, function(user)
 		addCharacter(_source, user, firstname, lastname)
+		user.setMoney(50)
 	end)
 end)
 
